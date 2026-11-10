@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A股模拟盘 · 每日看板</title>
+<style>
+:root{--bg:#f5f6f8;--card:#fff;--line:#e6e8ee;--text:#1b1f2a;--muted:#78808f;--up:#d93025;--down:#0f9d58}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Microsoft YaHei","PingFang SC",system-ui,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:22px 16px 60px}
+h1{font-size:22px;margin:0 0 4px}
+.sub{color:var(--muted);font-size:13px;margin-bottom:18px}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:14px}
+.hero .label{color:var(--muted);font-size:13px}
+.hero .big{font-size:38px;font-weight:700;margin:6px 0 2px}
+.hero .big small{font-size:15px;font-weight:500;margin-left:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:14px}
+.card h2{font-size:16px;margin:0 0 12px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left}
+th{color:var(--muted);font-weight:500;font-size:13px}
+tr:last-child td{border-bottom:none}
+.up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--muted)}
+.quiet{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px}
+.tile .k{color:var(--muted);font-size:12px}
+.tile .v{font-size:19px;font-weight:700;margin-top:4px}
+.curve{width:100%;height:170px;display:block}
+.base{stroke:#c9ced8;stroke-width:1;stroke-dasharray:4 4}
+.curve-note{color:var(--muted);font-size:12px;margin-top:6px}
+.next{background:#eef4ff;border:1px solid #d3e0fb;border-radius:12px;padding:12px 14px;font-size:14px}
+footer{color:var(--muted);font-size:12px;margin-top:20px;text-align:center}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero .big{font-size:32px}}
+</style></head><body><div class="wrap">
+<h1>A股模拟盘 · 每日看板</h1>
+<div class="sub">100 万虚拟资金练习，不花真钱，不连接券商。数据日 2026-11-10　更新时间 2026-11-10 22:21</div>
+
+<div class="hero">
+  <div class="label">主动学习账户（100 万）</div>
+  <div class="big down">¥1,000,059.18<small class="down">-86.40（-0.01%）</small></div>
+  <div class="sub" style="margin:0">从 1,000,000.00 起，累计 +59.18</div>
+</div>
+
+<div class="grid">
+  <div class="tile"><div class="k">ETF 基准账户</div><div class="v">¥99,045.03</div></div>
+  <div class="tile"><div class="k">个股影子</div><div class="v">¥2,000.00</div></div>
+  <div class="tile"><div class="k">个股风险闸门</div><div class="v" style="font-size:15px">关闭（不新开个股仓）</div></div>
+</div>
+
+<div class="card">
+  <h2>今天的动作</h2>
+  <p class="quiet">今天没有成交。没有信号就不下单，不为凑次数强行交易。</p>
+</div>
+
+<div class="card">
+  <h2>下一步会做什么</h2>
+  <div class="next">
+    <div>稳健底仓：无（等下一次收盘信号）</div>
+    <div>每日操作：目标：国债ETF 30%</div>
+  </div>
+  <p class="quiet" style="margin-top:10px">只有 pending 里的指令会在下一开盘执行；看板上不会出现“草案”式的假动作。</p>
+</div>
+
+<div class="card">
+  <h2>现在持有什么</h2>
+  <table><thead><tr><th>账户</th><th>品种</th><th>数量</th></tr></thead><tbody><tr><td>主动</td><td>国债ETF</td><td>1,900 份</td></tr><tr><td>卫星</td><td>国债ETF</td><td>800 份</td></tr><tr><td>基准</td><td>国债ETF</td><td>300 份</td></tr></tbody></table>
+</div>
+
+<div class="card">
+  <h2>净值走势</h2>
+  <svg viewBox="0 0 660 170" preserveAspectRatio="none" class="curve"><line x1="12" y1="158.0" x2="648" y2="158.0" class="base"/><polyline fill="none" stroke="#d93025" stroke-width="2.5" points="12.0,158.0 224.0,12.0 436.0,129.8 648.0,146.5"/></svg><div class="curve-note">2026-11-05 → 2026-11-10　净值区间 1,000,000.00 ~ 1,000,754.37　虚线为 100 万本金</div>
+</div>
+
+<div class="card">
+  <h2>最近成交</h2>
+  <table><thead><tr><th>日期</th><th>账户</th><th>品种</th><th>方向</th><th>数量</th><th>价</th></tr></thead><tbody><tr><td>2026-11-09</td><td>卫星</td><td>红利ETF</td><td class="down">卖出</td><td>35,800</td><td>3.3543</td></tr><tr><td>2026-11-09</td><td>基准</td><td>红利ETF</td><td class="down">卖出</td><td>13,100</td><td>3.3543</td></tr><tr><td>2026-11-06</td><td>主动</td><td>国债ETF</td><td class="up">买入</td><td>1,900</td><td>141.4497</td></tr><tr><td>2026-11-06</td><td>卫星</td><td>红利ETF</td><td class="up">买入</td><td>35,800</td><td>3.3457</td></tr><tr><td>2026-11-06</td><td>卫星</td><td>国债ETF</td><td class="up">买入</td><td>800</td><td>141.4497</td></tr><tr><td>2026-10-30</td><td>基准</td><td>红利ETF</td><td class="up">买入</td><td>13,100</td><td>3.4257</td></tr><tr><td>2026-10-30</td><td>基准</td><td>国债ETF</td><td class="up">买入</td><td>300</td><td>141.3606</td></tr></tbody></table>
+</div>
+
+<footer>模拟账户，不保证盈利，不构成投资建议。<br>本页由 Hermes 每个交易日收盘后自动更新。</footer>
+</div></body></html>
